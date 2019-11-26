@@ -1,28 +1,31 @@
 <template>
     <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <b-navbar type="dark" variant="dark">
+            <b-navbar-nav class="mx-auto">
+                <b-nav-item :active="locationIs('/')" to="/">Posts</b-nav-item>
+                <b-nav-item :active="locationIs('/add_post')" to="/add_post">Add Post</b-nav-item>
+                <b-nav-item disabled>Settings</b-nav-item>
+            </b-navbar-nav>
+        </b-navbar>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue'
-
     export default {
-        name: 'app',
-        components: {
-            HelloWorld
+        methods: {
+            locationIs(path) {
+                return path === location.pathname
+            }
+        },
+        created() {
+            this.$store.dispatch('getPosts')
         }
     }
 </script>
 
 <style>
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
+    body {
+        background: #FAF5FF;
     }
 </style>
