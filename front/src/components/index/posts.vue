@@ -12,7 +12,6 @@
                 {{ post.body }}
             </b-card-text>
             <b-button
-                :id="'tooltip-id' + post.id"
                 variant="outline-danger"
                 block
                 @click="onDelete(post.id)"

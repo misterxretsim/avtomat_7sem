@@ -54,6 +54,8 @@
                 variant="outline-success"
                 block
                 class="mt-5 mb-4"
+                v-b-tooltip.hover
+                title="Добавить новый пост"
             >Добавить</b-button>
         </b-form>
     </div>

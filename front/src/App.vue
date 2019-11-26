@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <b-navbar type="dark" variant="dark">
+        <b-navbar type="dark" variant="dark" sticky>
             <b-navbar-nav class="mx-auto">
                 <b-nav-item :active="locationIs('/')" to="/">Posts</b-nav-item>
                 <b-nav-item :active="locationIs('/add_post')" to="/add_post">Add Post</b-nav-item>
