@@ -78,7 +78,6 @@
                 const empty = { title: '', author: '', body: '' };
                 if (this.post.body.length <= 200 && this.post.body.length >= 30 && this.post.author.length >= 3 && this.post.title.length >= 3) {
                     this.$store.dispatch('addPost', {
-                        id: this.$store.getters.posts.length + 1,
                         author: this.post.author,
                         date: this.getDate(new Date()),
                         title: this.post.title,
