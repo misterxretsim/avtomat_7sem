@@ -4,7 +4,7 @@ export default {
     actions: {
         getPosts(ctx) {
             resource.post({method: 'get'})
-                .then((resp) => ctx.commit('updatePosts', resp.posts))
+                .then((resp) => ctx.commit('updatePosts', resp))
                 .catch((e) => alert(`error ${e}`))
                 // {
                 //     id: 1,
@@ -37,18 +37,18 @@ export default {
         },
         deletePost(ctx, id) {
             resource.post({method: 'delete', post: {id: id}})
-                .then((resp) => ctx.commit('updatePosts', resp.posts))
+                .then((resp) => ctx.commit('updatePosts', resp))
                 .catch((e) => alert(`error ${e}`))
         },
         addPost(ctx, post) {
             resource.post({method: 'add', post: post})
-                .then((resp) => ctx.commit('updatePosts', resp.posts))
+                .then((resp) => ctx.commit('updatePosts', resp))
                 .catch((e) => alert(`error ${e}`))
         }
     },
     mutations: {
         updatePosts(state, posts) {
-            state.posts = posts
+            state.posts = posts.book
         }
     },
     state: {

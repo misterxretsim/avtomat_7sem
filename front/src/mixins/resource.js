@@ -7,7 +7,7 @@ export default {
                 'Content-Type': 'application/json'
             }
         })
-        .then((resp) => Promise.resolve(resp.body))
+        .then((resp) => Promise.resolve(resp))
         .catch((err) => Promise.reject(err))
     }
 }
