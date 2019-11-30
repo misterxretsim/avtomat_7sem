@@ -5,7 +5,7 @@ export default {
         getPosts(ctx) {
             resource.post({method: 'get'})
                 .then((resp) => ctx.commit('updatePosts', resp))
-                .catch((e) => alert(`error ${e}`))
+                .catch((e) => alert(`error ${JSON.stringify(e)}`))
                 // {
                 //     id: 1,
                 //     author: 'Marina Kuzmina',
@@ -48,7 +48,7 @@ export default {
     },
     mutations: {
         updatePosts(state, posts) {
-            state.posts = posts.book
+            state.posts = posts.body.book
         }
     },
     state: {
