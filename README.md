@@ -1,16 +1,7 @@
-# front
+# Simple project for avtomat
 
-## Project setup
-```
-npm install
-```
+## For start project just double-click on "start.command" file
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+Project which was writen on JAVA(Spring, Maven) and VueJS(Vuex, Vue-router, Vue-resource, bootstrap-vue). Backend, Nginx and Database(Postgres) in docker containers as docker-compose' services. Nginx for routing API requests and getting static frontend.
 ```
